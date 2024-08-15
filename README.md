@@ -1,4 +1,7 @@
 <h1 align="center">Hi 👋, I'm Alan Salazar</h1>
+
+![](https://komarev.com/ghpvc/?username=alanslzrr&color=dc143c)
+
  <p>
   <img alt="MongoDB" src="https://img.shields.io/badge/-MongoDB-13aa52?style=flat-square&logo=mongodb&logoColor=white" />
   <img alt="git" src="https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white" />
