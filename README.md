@@ -1,5 +1,9 @@
 <h1 align="center">Hi 👋, I'm Alan Salazar</h1>
-<h3 align="center">A passionate frontend developer from India</h3>
+ 
+  <img alt="MongoDB" src="https://img.shields.io/badge/-MongoDB-13aa52?style=flat-square&logo=mongodb&logoColor=white" />
+  <img alt="git" src="https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white" />
+  <img alt="Python" src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" />
+ 
 
 - 🔭 I’m currently working as a freelancer on [UpWork](https://www.upwork.com/freelancers/~01c104161461f052a0?mp_source=share)
 
