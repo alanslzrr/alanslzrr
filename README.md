@@ -20,7 +20,7 @@
 
 - 🔭 I’m currently working as a freelancer on [UpWork](https://www.upwork.com/freelancers/~01c104161461f052a0?mp_source=share)
 
-- 🌱 I’m currently student **an engineering student in Artificial Intelligence and Blockchain at UIE (Intercontinental Business University)**
+- 🌱 I’m currently student **an student in Engineer's degree, Bachelor of Science (BSc) in Intelligent Systems at UIE (Intercontinental Business University)**
 
 - ⚡ My personal project [Beingside](https://beingside.com/)
 
