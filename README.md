@@ -54,7 +54,5 @@
   <a href="https://www.vectorlogo.zone/logos/zapier/zapier-icon.svg" target="_blank" rel="noreferrer">
     <img src="https://www.vectorlogo.zone/logos/zapier/zapier-icon.svg" alt="zapier" width="40" height="40"/>
   </a>
-  <a href="https://camo.githubusercontent.com/905eaba7e0da167f4d691f21dea4f49942be807920973d8b8897d897a0f687d5/68747470733a2f2f63646e2d69636f6e732d706e672e666c617469636f6e2e636f6d2f3531322f3137342f3137343838312e706e67" target="_blank" rel="noreferrer">
-    <img src="https://camo.githubusercontent.com/905eaba7e0da167f4d691f21dea4f49942be807920973d8b8897d897a0f687d5/68747470733a2f2f63646e2d69636f6e732d706e672e666c617469636f6e2e636f6d2f3531322f3137342f3137343838312e706e67" alt="wordpress" width="40" height="40"/>
-  </a>
+
 </p>
