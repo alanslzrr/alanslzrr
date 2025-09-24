@@ -18,11 +18,9 @@
 </p>
 
 
-- 🔭 I’m currently working as a freelancer on [UpWork](https://www.upwork.com/freelancers/~01c104161461f052a0?mp_source=share)
+- 🔭 I’m currently working as a freelancer on UpWork
 
 - 🌱 I’m currently student **an student in Engineer's degree, Bachelor of Science (BSc) in Intelligent Systems at UIE (Intercontinental Business University)**
-
-- ⚡ My personal project [Beingside](https://beingside.com/)
 
 - 👨‍💻 All of my public projects are available here.
 
