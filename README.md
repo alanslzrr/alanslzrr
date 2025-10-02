@@ -24,7 +24,6 @@
 
 - 👨‍💻 All of my public projects are available here.
 
-- 📝 I regularly write articles on [My Proyect](https://beingside.com/)
 
 - 📫 How to reach me **alansalazarfg2@gmail.com**
 
