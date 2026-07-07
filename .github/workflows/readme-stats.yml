@@ -64,6 +64,9 @@ jobs:
             const dateLabel = (date) =>
               new Intl.DateTimeFormat("en", { month: "short", day: "2-digit", timeZone: "UTC" })
                 .format(new Date(`${date}T00:00:00Z`));
+            const fullDateLabel = (date) =>
+              new Intl.DateTimeFormat("en", { month: "short", day: "2-digit", year: "numeric", timeZone: "UTC" })
+                .format(new Date(`${date}T00:00:00Z`));
             const excludedLanguages = new Set(["Jupyter Notebook", "JupyterNotebook"]);
             const compactLanguageName = (language) =>
               language.length > 12 ? `${language.slice(0, 10)}...` : language;
@@ -324,10 +327,23 @@ jobs:
                   <text x="54" y="${(y + 4).toFixed(2)}" fill="${colors.muted}" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" text-anchor="end">${value}</text>
                 `;
               }).join("");
-            const dayMarkers = points.map((point, index) => {
-              if (point.count === 0 && index % 3 !== 0) return "";
-              const opacity = point.count === 0 ? 0.18 : 0.25 + (point.count / yMax) * 0.55;
-              return `<circle cx="${point.x.toFixed(2)}" cy="${point.y.toFixed(2)}" r="${point.count ? 2.2 : 1.4}" fill="${colors.blue}" opacity="${opacity.toFixed(2)}"/>`;
+            const dayMarkers = points.map((point) => {
+              const x = point.x.toFixed(2);
+              const y = point.y.toFixed(2);
+              const label = `${fullDateLabel(point.date)} · ${point.count} ${point.count === 1 ? "contribution" : "contributions"}`;
+              const dotRadius = point.count >= yMax * 0.72 ? 2.4 : 1.8;
+              const visibleDot = point.count > 0
+                ? `<circle class="dot" cx="${x}" cy="${y}" r="${dotRadius}" fill="#FFFFFF" opacity="0.72"/>`
+                : "";
+              return `
+                <g class="day-point">
+                  <line class="guide" x1="${x}" y1="${chart.top}" x2="${x}" y2="${chart.bottom}" stroke="#FFFFFF" stroke-opacity="0.45"/>
+                  ${visibleDot}
+                  <circle class="chart-hit" cx="${x}" cy="${y}" r="9">
+                    <title>${escape(label)}</title>
+                  </circle>
+                </g>
+              `;
             }).join("");
 
             const timelineSvg = `
@@ -342,16 +358,24 @@ jobs:
                   .grid { opacity: 0; animation: fadeIn 900ms ease forwards 160ms; }
                   .line { stroke-dasharray: 1; stroke-dashoffset: 1; animation: drawLine 1.45s cubic-bezier(.2,.8,.2,1) forwards 260ms; }
                   .area { opacity: 0; animation: fadeIn 1.1s ease forwards 520ms; }
+                  .day-point .guide { opacity: 0; transition: opacity 180ms ease; }
+                  .day-point .dot { transition: opacity 180ms ease, r 180ms ease; }
+                  .day-point:hover .guide { opacity: 0.45; }
+                  .day-point:hover .dot { opacity: 1; r: 3; }
+                  .chart-hit { cursor: crosshair; fill: #FFFFFF; opacity: 0; pointer-events: all; }
                 </style>
                 <defs>
                   <linearGradient id="area" x1="0" y1="${chart.top}" x2="0" y2="${chart.bottom}">
-                    <stop offset="0" stop-color="${colors.blue}" stop-opacity="0.22"/>
-                    <stop offset="1" stop-color="${colors.blue}" stop-opacity="0"/>
+                    <stop offset="0" stop-color="#0B3A54" stop-opacity="0.76"/>
+                    <stop offset="1" stop-color="#061722" stop-opacity="0.32"/>
                   </linearGradient>
                   <filter id="glow" x="-10%" y="-30%" width="120%" height="160%">
-                    <feGaussianBlur stdDeviation="3" result="blur"/>
+                    <feGaussianBlur stdDeviation="1.1" result="blur"/>
+                    <feComponentTransfer in="blur" result="softBlur">
+                      <feFuncA type="linear" slope="0.22"/>
+                    </feComponentTransfer>
                     <feMerge>
-                      <feMergeNode in="blur"/>
+                      <feMergeNode in="softBlur"/>
                       <feMergeNode in="SourceGraphic"/>
                     </feMerge>
                   </filter>
@@ -371,7 +395,7 @@ jobs:
                   <text x="24" y="218" fill="${colors.muted}" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" text-anchor="middle" transform="rotate(-90 24 218)">contributions</text>
                 </g>
                 <path class="area" d="${areaPath}" fill="url(#area)"/>
-                <path class="line" pathLength="1" d="${linePath}" stroke="${colors.blue}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+                <path class="line" pathLength="1" d="${linePath}" stroke="${colors.blue}" stroke-width="2.6" stroke-opacity="0.68" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
                 <g class="area">${dayMarkers}</g>
                 <g class="reveal" style="animation-delay:420ms">
                   <circle cx="${points.at(-1).x.toFixed(2)}" cy="${points.at(-1).y.toFixed(2)}" r="5" fill="${colors.blue}"/>
