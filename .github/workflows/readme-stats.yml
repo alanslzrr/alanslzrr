@@ -43,8 +43,6 @@ jobs:
               "C++": "#CBD5E1",
               C: "#94A3B8",
               "C#": "#7DD3FC",
-              JupyterNotebook: "#7DD3FC",
-              "Jupyter Notebook": "#7DD3FC",
               MDX: "#BAE6FD",
               Shell: "#64748B",
               Dockerfile: "#475569",
@@ -66,13 +64,9 @@ jobs:
             const dateLabel = (date) =>
               new Intl.DateTimeFormat("en", { month: "short", day: "2-digit", timeZone: "UTC" })
                 .format(new Date(`${date}T00:00:00Z`));
-            const compactLanguageName = (language) => {
-              const aliases = {
-                "Jupyter Notebook": "Jupyter NB"
-              };
-              const normalized = aliases[language] || language;
-              return normalized.length > 12 ? `${normalized.slice(0, 10)}...` : normalized;
-            };
+            const excludedLanguages = new Set(["Jupyter Notebook", "JupyterNotebook"]);
+            const compactLanguageName = (language) =>
+              language.length > 12 ? `${language.slice(0, 10)}...` : language;
 
             const userQuery = `
               query($login: String!) {
@@ -117,11 +111,15 @@ jobs:
                 repo: repo.name
               });
               for (const [language, bytes] of Object.entries(languages.data)) {
+                if (excludedLanguages.has(language)) continue;
                 languageTotals.set(language, (languageTotals.get(language) || 0) + bytes);
               }
             }
 
+            const totalLanguageBytes = [...languageTotals.values()]
+              .reduce((total, bytes) => total + bytes, 0) || 1;
             const topLanguages = [...languageTotals.entries()]
+              .filter(([, bytes]) => bytes / totalLanguageBytes >= 0.001)
               .sort((a, b) => b[1] - a[1])
               .slice(0, 8);
             const languageBytes = topLanguages.reduce((total, [, bytes]) => total + bytes, 0) || 1;
@@ -172,6 +170,105 @@ jobs:
                 </g>
               `;
             }).join("");
+
+            const heroSvg = `
+              <svg width="1320" height="360" viewBox="0 0 1320 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+                <title id="title">Alan Salazar</title>
+                <desc id="desc">Alan Salazar, AI engineer and Intelligent Systems Engineering student in A Coruna, Spain</desc>
+                <style>
+                  @keyframes fadeDown { from { opacity: 0; transform: translateY(-14px); } to { opacity: 1; transform: translateY(0); } }
+                  @keyframes draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+                  .reveal { opacity: 0; animation: fadeDown 760ms cubic-bezier(.2,.8,.2,1) forwards; }
+                  .line { stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw 1.2s cubic-bezier(.2,.8,.2,1) forwards; }
+                </style>
+                <line class="line" pathLength="1" x1="42" y1="42" x2="478" y2="42" stroke="${colors.border}" stroke-opacity="0.7"/>
+                <text class="reveal" x="506" y="48" fill="${colors.subtle}" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" font-weight="700" letter-spacing="5">PROFILE / ALANSLZRR</text>
+                <line class="line" pathLength="1" x1="710" y1="42" x2="1278" y2="42" stroke="${colors.border}" stroke-opacity="0.7"/>
+
+                <g class="reveal" style="animation-delay:100ms">
+                  <text x="42" y="126" fill="${colors.text}" font-family="Georgia, 'Times New Roman', serif" font-size="72">Alan</text>
+                  <text x="218" y="126" fill="${colors.blue}" font-family="Georgia, 'Times New Roman', serif" font-size="72" font-style="italic">Salazar</text>
+                </g>
+
+                <g class="reveal" style="animation-delay:210ms">
+                  <text x="42" y="184" fill="${colors.text}" font-family="Georgia, 'Times New Roman', serif" font-size="40">Building intelligent systems</text>
+                  <text x="548" y="184" fill="${colors.blue}" font-family="Georgia, 'Times New Roman', serif" font-size="40" font-style="italic">for production.</text>
+                </g>
+
+                <g class="reveal" style="animation-delay:320ms">
+                  <text x="42" y="232" fill="${colors.muted}" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="18" font-weight="600">AI Engineer · Intelligent Systems Engineering student · A Coruña, Spain</text>
+                  <text x="42" y="266" fill="${colors.subtle}" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="16">From Argentina to A Coruña, building GenAI systems that move from prototypes to production pipelines.</text>
+                </g>
+
+                <g class="reveal" style="animation-delay:420ms">
+                  <rect x="850" y="96" width="388" height="184" rx="12" fill="none" stroke="${colors.border}" stroke-opacity="0.86"/>
+                  <line x1="850" y1="136" x2="1238" y2="136" stroke="${colors.border}" stroke-opacity="0.65"/>
+                  <circle cx="878" cy="116" r="5" fill="${colors.blue}"/>
+                  <circle cx="898" cy="116" r="5" fill="${colors.border}"/>
+                  <circle cx="918" cy="116" r="5" fill="${colors.border}"/>
+                  <text x="880" y="170" fill="${colors.text}" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15">$ whoami</text>
+                  <text x="904" y="198" fill="${colors.blueSoft}" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15">Alan Salazar // AI Engineer</text>
+                  <text x="880" y="226" fill="${colors.text}" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15">$ focus</text>
+                  <text x="904" y="254" fill="${colors.muted}" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15">GenAI systems · internal tooling</text>
+                </g>
+              </svg>
+            `.trim();
+
+            const stackGroups = [
+              ["AI / LLM", ["OpenAI", "Anthropic", "LangChain"]],
+              ["Backend & APIs", ["Python", "TypeScript", "FastAPI", "Node.js"]],
+              ["Frontend", ["Next.js", "shadcn/ui"]],
+              ["Cloud & Infra", ["Google Cloud", "Docker", "Supabase", "Vercel"]]
+            ];
+            const stackChip = (label, x, y, active = false) => {
+              const width = Math.max(82, Math.round(label.length * 8.8 + 34));
+              const stroke = active ? colors.blue : colors.border;
+              const fill = active ? colors.blue : colors.text;
+              return {
+                width,
+                svg: `
+                  <g>
+                    <rect x="${x}" y="${y - 22}" width="${width}" height="34" rx="17" fill="none" stroke="${stroke}" stroke-opacity="${active ? 0.9 : 0.72}"/>
+                    <text x="${x + 17}" y="${y}" fill="${fill}" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14.5" font-weight="650">${escape(label)}</text>
+                  </g>
+                `
+              };
+            };
+            const stackRows = stackGroups.map(([category, items], index) => {
+              const y = 130 + index * 54;
+              let x = 318;
+              const chips = items.map((item, itemIndex) => {
+                const chip = stackChip(item, x, y, itemIndex === 0);
+                x += chip.width + 12;
+                return chip.svg;
+              }).join("");
+              return `
+                <g class="reveal" style="animation-delay:${140 + index * 90}ms">
+                  <text x="42" y="${y}" fill="${colors.muted}" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="700" letter-spacing="2">${escape(category.toUpperCase())}</text>
+                  <line x1="192" y1="${y - 5}" x2="282" y2="${y - 5}" stroke="${colors.border}" stroke-opacity="0.55"/>
+                  ${chips}
+                </g>
+              `;
+            }).join("");
+            const stackSvg = `
+              <svg width="1320" height="340" viewBox="0 0 1320 340" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+                <title id="title">Selected engineering stack</title>
+                <desc id="desc">Selected technologies used by Alan Salazar</desc>
+                <style>
+                  @keyframes fadeDown { from { opacity: 0; transform: translateY(-12px); } to { opacity: 1; transform: translateY(0); } }
+                  .reveal { opacity: 0; animation: fadeDown 720ms cubic-bezier(.2,.8,.2,1) forwards; }
+                </style>
+                <line x1="42" y1="30" x2="528" y2="30" stroke="${colors.border}" stroke-opacity="0.7"/>
+                <text x="556" y="36" fill="${colors.subtle}" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" font-weight="700" letter-spacing="5">SELECTED STACK</text>
+                <line x1="736" y1="30" x2="1278" y2="30" stroke="${colors.border}" stroke-opacity="0.7"/>
+                <g class="reveal">
+                  <text x="42" y="78" fill="${colors.text}" font-family="Georgia, 'Times New Roman', serif" font-size="38">Tools I use</text>
+                  <text x="248" y="78" fill="${colors.blue}" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-style="italic">to ship.</text>
+                  <text x="768" y="78" fill="${colors.muted}" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="16">A focused stack for AI systems, APIs, interfaces, and production infrastructure.</text>
+                </g>
+                ${stackRows}
+              </svg>
+            `.trim();
 
             const statsSvg = `
               <svg width="1320" height="310" viewBox="0 0 1320 310" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
@@ -296,6 +393,8 @@ jobs:
             `.trim();
 
             fs.mkdirSync("dist/generated", { recursive: true });
+            fs.writeFileSync("dist/generated/hero.svg", heroSvg);
+            fs.writeFileSync("dist/generated/stack.svg", stackSvg);
             fs.writeFileSync("dist/generated/stats.svg", statsSvg);
             fs.writeFileSync("dist/generated/timeline.svg", timelineSvg);
 
