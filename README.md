@@ -65,5 +65,11 @@ going from an initial proof of concept to production pipelines the company actua
 ## Stats
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/alanslzrr/alanslzrr/output/generated/stats.svg" alt="GitHub stats, languages, and contribution timeline"/>
+  <img src="https://raw.githubusercontent.com/alanslzrr/alanslzrr/output/generated/stats.svg" alt="GitHub stats and most used languages"/>
+</div>
+
+<br/>
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/alanslzrr/alanslzrr/output/generated/timeline.svg" alt="Daily GitHub contribution timeline with dates and contribution counts"/>
 </div>
