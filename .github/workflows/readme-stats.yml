@@ -191,23 +191,24 @@ jobs:
                 </g>
 
                 <g class="reveal" style="animation-delay:210ms">
-                  <text x="42" y="158" fill="${colors.muted}" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="18" font-weight="650">A Coruña, Spain · GenAI systems · production pipelines</text>
+                  <text x="42" y="158" fill="${colors.muted}" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="18" font-weight="650">A Coruña, Spain · GenAI systems · internal tooling</text>
                 </g>
 
                 <g class="reveal" style="animation-delay:320ms">
                   <line x1="42" y1="190" x2="1278" y2="190" stroke="${colors.border}" stroke-opacity="0.75"/>
                   <text x="42" y="226" fill="${colors.text}" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="19">From Argentina, moved to Spain in 2023 to study Intelligent Systems Engineering at UIE (A Coruña). While finishing</text>
                   <text x="42" y="256" fill="${colors.text}" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="19">my degree, I've been working remotely at a calibration company implementing GenAI systems, going from an initial</text>
-                  <text x="42" y="286" fill="${colors.text}" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="19">proof of concept to production pipelines the company actually runs on today.</text>
+                  <text x="42" y="286" fill="${colors.text}" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="19">proof of concept to systems the company actually runs today.</text>
                 </g>
               </svg>
             `.trim();
 
             const stackGroups = [
-              ["AI / LLM", ["OpenAI", "Anthropic", "LangChain"]],
+              ["AI / LLM", ["OpenAI API", "LangChain"]],
               ["Backend & APIs", ["Python", "TypeScript", "FastAPI", "Node.js"]],
-              ["Frontend", ["Next.js", "shadcn/ui"]],
-              ["Cloud & Infra", ["Google Cloud", "Docker", "Supabase", "Vercel"]]
+              ["Frontend", ["Next.js", "Tailwind CSS", "shadcn/ui"]],
+              ["Cloud & Infra", ["GCP", "Docker", "Supabase", "Vercel"]],
+              ["CI / CD", ["GitHub Actions", "Cloud Run"]]
             ];
             const stackChip = (label, x, y, active = false) => {
               const width = Math.max(82, Math.round(label.length * 8.8 + 34));
@@ -224,7 +225,7 @@ jobs:
               };
             };
             const stackRows = stackGroups.map(([category, items], index) => {
-              const y = 126 + index * 48;
+              const y = 120 + index * 42;
               let x = 318;
               const chips = items.map((item, itemIndex) => {
                 const chip = stackChip(item, x, y, itemIndex === 0);
@@ -240,7 +241,7 @@ jobs:
               `;
             }).join("");
             const stackSvg = `
-              <svg width="1320" height="310" viewBox="0 0 1320 310" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+              <svg width="1320" height="330" viewBox="0 0 1320 330" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
                 <title id="title">Selected engineering stack</title>
                 <desc id="desc">Selected technologies used by Alan Salazar</desc>
                 <style>
@@ -252,7 +253,7 @@ jobs:
                 <line x1="736" y1="30" x2="1278" y2="30" stroke="${colors.border}" stroke-opacity="0.7"/>
                 <g class="reveal">
                   <text x="42" y="78" fill="${colors.text}" font-family="Georgia, 'Times New Roman', serif" font-size="38">Stack</text>
-                  <text x="768" y="78" fill="${colors.muted}" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="16">AI systems, APIs, interfaces, and production infrastructure.</text>
+                  <text x="768" y="78" fill="${colors.muted}" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="16">AI systems, APIs, interfaces, and deployment automation.</text>
                 </g>
                 ${stackRows}
               </svg>
