@@ -172,8 +172,8 @@ jobs:
             }).join("");
 
             const heroSvg = `
-              <svg width="1320" height="360" viewBox="0 0 1320 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-                <title id="title">Alan Salazar</title>
+              <svg width="1320" height="310" viewBox="0 0 1320 310" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+                <title id="title">AI Engineer and Intelligent Systems Engineering student</title>
                 <desc id="desc">Alan Salazar, AI engineer and Intelligent Systems Engineering student in A Coruna, Spain</desc>
                 <style>
                   @keyframes fadeDown { from { opacity: 0; transform: translateY(-14px); } to { opacity: 1; transform: translateY(0); } }
@@ -186,30 +186,19 @@ jobs:
                 <line class="line" pathLength="1" x1="710" y1="42" x2="1278" y2="42" stroke="${colors.border}" stroke-opacity="0.7"/>
 
                 <g class="reveal" style="animation-delay:100ms">
-                  <text x="42" y="126" fill="${colors.text}" font-family="Georgia, 'Times New Roman', serif" font-size="72">Alan</text>
-                  <text x="218" y="126" fill="${colors.blue}" font-family="Georgia, 'Times New Roman', serif" font-size="72" font-style="italic">Salazar</text>
+                  <text x="42" y="116" fill="${colors.text}" font-family="Georgia, 'Times New Roman', serif" font-size="42">AI Engineer</text>
+                  <text x="280" y="116" fill="${colors.blue}" font-family="Georgia, 'Times New Roman', serif" font-size="42" font-style="italic">Intelligent Systems Engineering student</text>
                 </g>
 
                 <g class="reveal" style="animation-delay:210ms">
-                  <text x="42" y="184" fill="${colors.text}" font-family="Georgia, 'Times New Roman', serif" font-size="40">Building intelligent systems</text>
-                  <text x="548" y="184" fill="${colors.blue}" font-family="Georgia, 'Times New Roman', serif" font-size="40" font-style="italic">for production.</text>
+                  <text x="42" y="158" fill="${colors.muted}" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="18" font-weight="650">A Coruña, Spain · GenAI systems · production pipelines</text>
                 </g>
 
                 <g class="reveal" style="animation-delay:320ms">
-                  <text x="42" y="232" fill="${colors.muted}" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="18" font-weight="600">AI Engineer · Intelligent Systems Engineering student · A Coruña, Spain</text>
-                  <text x="42" y="266" fill="${colors.subtle}" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="16">From Argentina to A Coruña, building GenAI systems that move from prototypes to production pipelines.</text>
-                </g>
-
-                <g class="reveal" style="animation-delay:420ms">
-                  <rect x="850" y="96" width="388" height="184" rx="12" fill="none" stroke="${colors.border}" stroke-opacity="0.86"/>
-                  <line x1="850" y1="136" x2="1238" y2="136" stroke="${colors.border}" stroke-opacity="0.65"/>
-                  <circle cx="878" cy="116" r="5" fill="${colors.blue}"/>
-                  <circle cx="898" cy="116" r="5" fill="${colors.border}"/>
-                  <circle cx="918" cy="116" r="5" fill="${colors.border}"/>
-                  <text x="880" y="170" fill="${colors.text}" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15">$ whoami</text>
-                  <text x="904" y="198" fill="${colors.blueSoft}" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15">Alan Salazar // AI Engineer</text>
-                  <text x="880" y="226" fill="${colors.text}" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15">$ focus</text>
-                  <text x="904" y="254" fill="${colors.muted}" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15">GenAI systems · internal tooling</text>
+                  <line x1="42" y1="190" x2="1278" y2="190" stroke="${colors.border}" stroke-opacity="0.75"/>
+                  <text x="42" y="226" fill="${colors.text}" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="19">From Argentina, moved to Spain in 2023 to study Intelligent Systems Engineering at UIE (A Coruña). While finishing</text>
+                  <text x="42" y="256" fill="${colors.text}" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="19">my degree, I've been working remotely at a calibration company implementing GenAI systems, going from an initial</text>
+                  <text x="42" y="286" fill="${colors.text}" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="19">proof of concept to production pipelines the company actually runs on today.</text>
                 </g>
               </svg>
             `.trim();
@@ -235,7 +224,7 @@ jobs:
               };
             };
             const stackRows = stackGroups.map(([category, items], index) => {
-              const y = 130 + index * 54;
+              const y = 126 + index * 48;
               let x = 318;
               const chips = items.map((item, itemIndex) => {
                 const chip = stackChip(item, x, y, itemIndex === 0);
@@ -251,7 +240,7 @@ jobs:
               `;
             }).join("");
             const stackSvg = `
-              <svg width="1320" height="340" viewBox="0 0 1320 340" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+              <svg width="1320" height="310" viewBox="0 0 1320 310" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
                 <title id="title">Selected engineering stack</title>
                 <desc id="desc">Selected technologies used by Alan Salazar</desc>
                 <style>
@@ -259,12 +248,11 @@ jobs:
                   .reveal { opacity: 0; animation: fadeDown 720ms cubic-bezier(.2,.8,.2,1) forwards; }
                 </style>
                 <line x1="42" y1="30" x2="528" y2="30" stroke="${colors.border}" stroke-opacity="0.7"/>
-                <text x="556" y="36" fill="${colors.subtle}" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" font-weight="700" letter-spacing="5">SELECTED STACK</text>
+                <text x="556" y="36" fill="${colors.subtle}" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" font-weight="700" letter-spacing="5">STACK</text>
                 <line x1="736" y1="30" x2="1278" y2="30" stroke="${colors.border}" stroke-opacity="0.7"/>
                 <g class="reveal">
-                  <text x="42" y="78" fill="${colors.text}" font-family="Georgia, 'Times New Roman', serif" font-size="38">Tools I use</text>
-                  <text x="248" y="78" fill="${colors.blue}" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-style="italic">to ship.</text>
-                  <text x="768" y="78" fill="${colors.muted}" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="16">A focused stack for AI systems, APIs, interfaces, and production infrastructure.</text>
+                  <text x="42" y="78" fill="${colors.text}" font-family="Georgia, 'Times New Roman', serif" font-size="38">Stack</text>
+                  <text x="768" y="78" fill="${colors.muted}" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="16">AI systems, APIs, interfaces, and production infrastructure.</text>
                 </g>
                 ${stackRows}
               </svg>
@@ -282,8 +270,7 @@ jobs:
                 <text x="612" y="34" fill="${colors.subtle}" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" font-weight="700" letter-spacing="5">GITHUB STATS</text>
                 <line x1="736" y1="28" x2="1280" y2="28" stroke="${colors.border}" stroke-opacity="0.7"/>
                 <g class="reveal">
-                  <text x="42" y="72" fill="${colors.text}" font-family="Georgia, 'Times New Roman', serif" font-size="38">GitHub</text>
-                  <text x="182" y="72" fill="${colors.blue}" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-style="italic">signal.</text>
+                  <text x="42" y="72" fill="${colors.text}" font-family="Georgia, 'Times New Roman', serif" font-size="38">GitHub stats</text>
                   <text x="768" y="72" fill="${colors.text}" font-family="Georgia, 'Times New Roman', serif" font-size="32">Most used languages</text>
                 </g>
                 <g class="reveal" style="animation-delay:180ms">
