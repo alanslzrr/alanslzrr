@@ -24,6 +24,4 @@
 
 <br/>
 
-<div align="center">
-  <img src="https://raw.githubusercontent.com/alanslzrr/alanslzrr/output/generated/timeline.svg" alt="Daily GitHub contribution timeline with dates and contribution counts"/>
 </div>
