@@ -1,0 +1,93 @@
+<svg width="1320" height="310" viewBox="0 0 1320 310" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+    <title id="title">GitHub stats overview</title>
+    <desc id="desc">GitHub statistics and most used languages for alanslzrr</desc>
+    <style>
+      @keyframes fadeDown { from { opacity: 0; transform: translateY(-12px); } to { opacity: 1; transform: translateY(0); } }
+      .reveal { opacity: 0; animation: fadeDown 720ms cubic-bezier(.2,.8,.2,1) forwards; }
+    </style>
+    <line x1="42" y1="28" x2="584" y2="28" stroke="#30363D" stroke-opacity="0.7"/>
+    <text x="612" y="34" fill="#6E7681" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" font-weight="700" letter-spacing="5">GITHUB STATS</text>
+    <line x1="736" y1="28" x2="1280" y2="28" stroke="#30363D" stroke-opacity="0.7"/>
+    <g class="reveal">
+      <text x="42" y="72" fill="#F0F6FC" font-family="Georgia, 'Times New Roman', serif" font-size="38">GitHub stats</text>
+      <text x="768" y="72" fill="#F0F6FC" font-family="Georgia, 'Times New Roman', serif" font-size="32">Most used languages</text>
+    </g>
+    <g class="reveal" style="animation-delay:180ms">
+      <rect x="768" y="106" width="500" height="8" rx="4" fill="#30363D" fill-opacity="0.5"/>
+      <rect x="768" y="106" width="356.5676752250012" height="8" rx="4" fill="#38BDF8"/><rect x="1124.5676752250013" y="106" width="98.26996012281259" height="8" rx="4" fill="#00A3FF"/><rect x="1222.8376353478138" y="106" width="17.11037140793361" height="8" rx="4" fill="#60A5FA"/><rect x="1239.9480067557474" y="106" width="11.32552104844138" height="8" rx="4" fill="#93C5FD"/><rect x="1251.2735278041887" y="106" width="10.336390174289145" height="8" rx="4" fill="#2563EB"/><rect x="1261.6099179784778" y="106" width="8" height="8" rx="4" fill="#CBD5E1"/>
+    </g>
+    
+    <g class="reveal" style="animation-delay:120ms">
+      <text x="42" y="122" fill="#8B949E" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10.5" font-weight="700" letter-spacing="1.7">STARS</text>
+      <text x="42" y="158" fill="#F0F6FC" font-family="Georgia, 'Times New Roman', serif" font-size="31">4</text>
+      <line x1="42" y1="174" x2="200" y2="174" stroke="#30363D" stroke-opacity="0.72"/>
+    </g>
+  
+    <g class="reveal" style="animation-delay:180ms">
+      <text x="262" y="122" fill="#8B949E" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10.5" font-weight="700" letter-spacing="1.7">FORKS</text>
+      <text x="262" y="158" fill="#F0F6FC" font-family="Georgia, 'Times New Roman', serif" font-size="31">1</text>
+      <line x1="262" y1="174" x2="420" y2="174" stroke="#30363D" stroke-opacity="0.72"/>
+    </g>
+  
+    <g class="reveal" style="animation-delay:240ms">
+      <text x="482" y="122" fill="#8B949E" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10.5" font-weight="700" letter-spacing="1.7">YEAR CONTRIBUTIONS</text>
+      <text x="482" y="158" fill="#F0F6FC" font-family="Georgia, 'Times New Roman', serif" font-size="31">7,796</text>
+      <line x1="482" y1="174" x2="640" y2="174" stroke="#30363D" stroke-opacity="0.72"/>
+    </g>
+  
+    <g class="reveal" style="animation-delay:300ms">
+      <text x="42" y="204" fill="#8B949E" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10.5" font-weight="700" letter-spacing="1.7">YEAR COMMITS</text>
+      <text x="42" y="240" fill="#F0F6FC" font-family="Georgia, 'Times New Roman', serif" font-size="31">526</text>
+      <line x1="42" y1="256" x2="200" y2="256" stroke="#30363D" stroke-opacity="0.72"/>
+    </g>
+  
+    <g class="reveal" style="animation-delay:360ms">
+      <text x="262" y="204" fill="#8B949E" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10.5" font-weight="700" letter-spacing="1.7">PULL REQUESTS</text>
+      <text x="262" y="240" fill="#F0F6FC" font-family="Georgia, 'Times New Roman', serif" font-size="31">9</text>
+      <line x1="262" y1="256" x2="420" y2="256" stroke="#30363D" stroke-opacity="0.72"/>
+    </g>
+  
+    <g class="reveal" style="animation-delay:420ms">
+      <text x="482" y="204" fill="#8B949E" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="10.5" font-weight="700" letter-spacing="1.7">PUBLIC REPOSITORIES</text>
+      <text x="482" y="240" fill="#F0F6FC" font-family="Georgia, 'Times New Roman', serif" font-size="31">29</text>
+      <line x1="482" y1="256" x2="640" y2="256" stroke="#30363D" stroke-opacity="0.72"/>
+    </g>
+  
+    
+    <g class="reveal" style="animation-delay:260ms">
+      <circle cx="768" cy="153" r="5.5" fill="#38BDF8"/>
+      <text x="786" y="158" fill="#F0F6FC" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14.5" font-weight="650">Python</text>
+      <text x="954" y="158" fill="#8B949E" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12.5" text-anchor="end">71.3%</text>
+    </g>
+  
+    <g class="reveal" style="animation-delay:305ms">
+      <circle cx="1020" cy="153" r="5.5" fill="#00A3FF"/>
+      <text x="1038" y="158" fill="#F0F6FC" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14.5" font-weight="650">TypeScript</text>
+      <text x="1206" y="158" fill="#8B949E" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12.5" text-anchor="end">19.7%</text>
+    </g>
+  
+    <g class="reveal" style="animation-delay:350ms">
+      <circle cx="768" cy="190" r="5.5" fill="#60A5FA"/>
+      <text x="786" y="195" fill="#F0F6FC" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14.5" font-weight="650">HTML</text>
+      <text x="954" y="195" fill="#8B949E" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12.5" text-anchor="end">3.4%</text>
+    </g>
+  
+    <g class="reveal" style="animation-delay:395ms">
+      <circle cx="1020" cy="190" r="5.5" fill="#93C5FD"/>
+      <text x="1038" y="195" fill="#F0F6FC" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14.5" font-weight="650">JavaScript</text>
+      <text x="1206" y="195" fill="#8B949E" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12.5" text-anchor="end">2.3%</text>
+    </g>
+  
+    <g class="reveal" style="animation-delay:440ms">
+      <circle cx="768" cy="227" r="5.5" fill="#2563EB"/>
+      <text x="786" y="232" fill="#F0F6FC" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14.5" font-weight="650">CSS</text>
+      <text x="954" y="232" fill="#8B949E" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12.5" text-anchor="end">2.1%</text>
+    </g>
+  
+    <g class="reveal" style="animation-delay:485ms">
+      <circle cx="1020" cy="227" r="5.5" fill="#CBD5E1"/>
+      <text x="1038" y="232" fill="#F0F6FC" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14.5" font-weight="650">C++</text>
+      <text x="1206" y="232" fill="#8B949E" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12.5" text-anchor="end">1.3%</text>
+    </g>
+  
+  </svg>
