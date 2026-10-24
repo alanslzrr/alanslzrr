@@ -1,0 +1,121 @@
+<svg width="1320" height="330" viewBox="0 0 1320 330" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+    <title id="title">Selected engineering stack</title>
+    <desc id="desc">Selected technologies used by Alan Salazar</desc>
+    <style>
+      @keyframes fadeDown { from { opacity: 0; transform: translateY(-12px); } to { opacity: 1; transform: translateY(0); } }
+      .reveal { opacity: 0; animation: fadeDown 720ms cubic-bezier(.2,.8,.2,1) forwards; }
+    </style>
+    <line x1="42" y1="30" x2="528" y2="30" stroke="#30363D" stroke-opacity="0.7"/>
+    <text x="556" y="36" fill="#6E7681" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" font-weight="700" letter-spacing="5">STACK</text>
+    <line x1="736" y1="30" x2="1278" y2="30" stroke="#30363D" stroke-opacity="0.7"/>
+    <g class="reveal">
+      <text x="42" y="78" fill="#F0F6FC" font-family="Georgia, 'Times New Roman', serif" font-size="38">Stack</text>
+      <text x="768" y="78" fill="#8B949E" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="16">AI systems, APIs, interfaces, and deployment automation.</text>
+    </g>
+    
+    <g class="reveal" style="animation-delay:140ms">
+      <text x="42" y="120" fill="#8B949E" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="700" letter-spacing="2">AI / LLM</text>
+      <line x1="192" y1="115" x2="282" y2="115" stroke="#30363D" stroke-opacity="0.55"/>
+      
+      <g>
+        <rect x="318" y="98" width="122" height="34" rx="17" fill="none" stroke="#00A3FF" stroke-opacity="0.9"/>
+        <text x="335" y="120" fill="#00A3FF" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14.5" font-weight="650">OpenAI API</text>
+      </g>
+    
+      <g>
+        <rect x="452" y="98" width="113" height="34" rx="17" fill="none" stroke="#30363D" stroke-opacity="0.72"/>
+        <text x="469" y="120" fill="#F0F6FC" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14.5" font-weight="650">LangChain</text>
+      </g>
+    
+    </g>
+  
+    <g class="reveal" style="animation-delay:230ms">
+      <text x="42" y="162" fill="#8B949E" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="700" letter-spacing="2">BACKEND &amp; APIS</text>
+      <line x1="192" y1="157" x2="282" y2="157" stroke="#30363D" stroke-opacity="0.55"/>
+      
+      <g>
+        <rect x="318" y="140" width="87" height="34" rx="17" fill="none" stroke="#00A3FF" stroke-opacity="0.9"/>
+        <text x="335" y="162" fill="#00A3FF" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14.5" font-weight="650">Python</text>
+      </g>
+    
+      <g>
+        <rect x="417" y="140" width="122" height="34" rx="17" fill="none" stroke="#30363D" stroke-opacity="0.72"/>
+        <text x="434" y="162" fill="#F0F6FC" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14.5" font-weight="650">TypeScript</text>
+      </g>
+    
+      <g>
+        <rect x="551" y="140" width="96" height="34" rx="17" fill="none" stroke="#30363D" stroke-opacity="0.72"/>
+        <text x="568" y="162" fill="#F0F6FC" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14.5" font-weight="650">FastAPI</text>
+      </g>
+    
+      <g>
+        <rect x="659" y="140" width="96" height="34" rx="17" fill="none" stroke="#30363D" stroke-opacity="0.72"/>
+        <text x="676" y="162" fill="#F0F6FC" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14.5" font-weight="650">Node.js</text>
+      </g>
+    
+    </g>
+  
+    <g class="reveal" style="animation-delay:320ms">
+      <text x="42" y="204" fill="#8B949E" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="700" letter-spacing="2">FRONTEND</text>
+      <line x1="192" y1="199" x2="282" y2="199" stroke="#30363D" stroke-opacity="0.55"/>
+      
+      <g>
+        <rect x="318" y="182" width="96" height="34" rx="17" fill="none" stroke="#00A3FF" stroke-opacity="0.9"/>
+        <text x="335" y="204" fill="#00A3FF" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14.5" font-weight="650">Next.js</text>
+      </g>
+    
+      <g>
+        <rect x="426" y="182" width="140" height="34" rx="17" fill="none" stroke="#30363D" stroke-opacity="0.72"/>
+        <text x="443" y="204" fill="#F0F6FC" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14.5" font-weight="650">Tailwind CSS</text>
+      </g>
+    
+      <g>
+        <rect x="578" y="182" width="113" height="34" rx="17" fill="none" stroke="#30363D" stroke-opacity="0.72"/>
+        <text x="595" y="204" fill="#F0F6FC" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14.5" font-weight="650">shadcn/ui</text>
+      </g>
+    
+    </g>
+  
+    <g class="reveal" style="animation-delay:410ms">
+      <text x="42" y="246" fill="#8B949E" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="700" letter-spacing="2">CLOUD &amp; INFRA</text>
+      <line x1="192" y1="241" x2="282" y2="241" stroke="#30363D" stroke-opacity="0.55"/>
+      
+      <g>
+        <rect x="318" y="224" width="82" height="34" rx="17" fill="none" stroke="#00A3FF" stroke-opacity="0.9"/>
+        <text x="335" y="246" fill="#00A3FF" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14.5" font-weight="650">GCP</text>
+      </g>
+    
+      <g>
+        <rect x="412" y="224" width="87" height="34" rx="17" fill="none" stroke="#30363D" stroke-opacity="0.72"/>
+        <text x="429" y="246" fill="#F0F6FC" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14.5" font-weight="650">Docker</text>
+      </g>
+    
+      <g>
+        <rect x="511" y="224" width="104" height="34" rx="17" fill="none" stroke="#30363D" stroke-opacity="0.72"/>
+        <text x="528" y="246" fill="#F0F6FC" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14.5" font-weight="650">Supabase</text>
+      </g>
+    
+      <g>
+        <rect x="627" y="224" width="87" height="34" rx="17" fill="none" stroke="#30363D" stroke-opacity="0.72"/>
+        <text x="644" y="246" fill="#F0F6FC" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14.5" font-weight="650">Vercel</text>
+      </g>
+    
+    </g>
+  
+    <g class="reveal" style="animation-delay:500ms">
+      <text x="42" y="288" fill="#8B949E" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="700" letter-spacing="2">CI / CD</text>
+      <line x1="192" y1="283" x2="282" y2="283" stroke="#30363D" stroke-opacity="0.55"/>
+      
+      <g>
+        <rect x="318" y="266" width="157" height="34" rx="17" fill="none" stroke="#00A3FF" stroke-opacity="0.9"/>
+        <text x="335" y="288" fill="#00A3FF" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14.5" font-weight="650">GitHub Actions</text>
+      </g>
+    
+      <g>
+        <rect x="487" y="266" width="113" height="34" rx="17" fill="none" stroke="#30363D" stroke-opacity="0.72"/>
+        <text x="504" y="288" fill="#F0F6FC" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14.5" font-weight="650">Cloud Run</text>
+      </g>
+    
+    </g>
+  
+  </svg>
