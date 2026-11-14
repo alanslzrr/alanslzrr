@@ -1,0 +1,29 @@
+<svg width="1320" height="310" viewBox="0 0 1320 310" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+    <title id="title">AI Engineer and Intelligent Systems Engineering student</title>
+    <desc id="desc">Alan Salazar, AI engineer and Intelligent Systems Engineering student in A Coruna, Spain</desc>
+    <style>
+      @keyframes fadeDown { from { opacity: 0; transform: translateY(-14px); } to { opacity: 1; transform: translateY(0); } }
+      @keyframes draw { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+      .reveal { opacity: 0; animation: fadeDown 760ms cubic-bezier(.2,.8,.2,1) forwards; }
+      .line { stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw 1.2s cubic-bezier(.2,.8,.2,1) forwards; }
+    </style>
+    <line class="line" pathLength="1" x1="42" y1="42" x2="478" y2="42" stroke="#30363D" stroke-opacity="0.7"/>
+    <text class="reveal" x="506" y="48" fill="#6E7681" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13" font-weight="700" letter-spacing="5">PROFILE / ALANSLZRR</text>
+    <line class="line" pathLength="1" x1="710" y1="42" x2="1278" y2="42" stroke="#30363D" stroke-opacity="0.7"/>
+
+    <g class="reveal" style="animation-delay:100ms">
+      <text x="42" y="116" fill="#F0F6FC" font-family="Georgia, 'Times New Roman', serif" font-size="42">AI Engineer</text>
+      <text x="280" y="116" fill="#00A3FF" font-family="Georgia, 'Times New Roman', serif" font-size="42" font-style="italic">Intelligent Systems Engineering student</text>
+    </g>
+
+    <g class="reveal" style="animation-delay:210ms">
+      <text x="42" y="158" fill="#8B949E" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="18" font-weight="650">A Coruña, Spain · GenAI systems · internal tooling</text>
+    </g>
+
+    <g class="reveal" style="animation-delay:320ms">
+      <line x1="42" y1="190" x2="1278" y2="190" stroke="#30363D" stroke-opacity="0.75"/>
+      <text x="42" y="226" fill="#F0F6FC" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="19">From Argentina, moved to Spain in 2023 to study Intelligent Systems Engineering at UIE (A Coruña). While finishing</text>
+      <text x="42" y="256" fill="#F0F6FC" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="19">my degree, I've been working remotely at a calibration company implementing GenAI systems, going from an initial</text>
+      <text x="42" y="286" fill="#F0F6FC" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="19">proof of concept to systems the company actually runs today.</text>
+    </g>
+  </svg>
